@@ -1,0 +1,52 @@
+
+.container {
+  padding: 0 15px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+@media (max-width: 768px) {
+  .col-lg-9,
+  .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.5rem;
+  }
+}

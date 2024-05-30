@@ -1,0 +1,38 @@
+<app-header-admin></app-header-admin>
+
+      <!-- Page Content List Products-->
+      <div class="container">
+          <!-- Page Heading/Breadcrumbs -->
+          <h1 class="mt-4 mb-3">
+              KéMobile <small>Ordenes</small>
+          </h1>
+
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+              <li class="breadcrumb-item active">Ver Ordenes</li>
+          </ol>
+
+          <h2>Ordemnes</h2>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Fecha orden</th>
+                      <th>Id orden</th>
+                      <th>Id usuario</th>
+                      <th>Estado de orden</th>
+                  </tr>
+              </thead>
+              <tbody *ngFor="let p of orders">
+                  <tr>
+                    <td>{{p.dateCreated}}</td>
+                    <td>{{p.id}}</td>
+                    <td>{{p.userId}}</td>
+                    <td>{{p.orderState}}</td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+
+<app-footer></app-footer>

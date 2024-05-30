@@ -1,0 +1,32 @@
+<app-header-user></app-header-user>
+
+<form (ngSubmit)="login()">
+  <div class="login-box">
+    <div class="login-header">
+      <header>Login</header>
+    </div>
+    <div class="input-box">
+      <input [(ngModel)]="username" type="email" class="input-field" id="email" name="email" placeholder="Ingrese su email" required autocomplete="off">
+    </div>
+    <div class="input-box">
+      <input [(ngModel)]="password" type="password" class="input-field" id="password" name="password" placeholder="Ingrese su contraseña" required>
+    </div>
+    <div class="forgot">
+      <section>
+        <a href="#">He olvidado mi contraseña</a>
+      </section>
+    </div>
+    <div class="input-submit">
+      <button class="submit-btn" id="submit"></button>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      <label for="submit">Ingresar</label>
+    </div>
+    <div class="sign-up-link">
+      <a [routerLink]="['/user/register']" routerLinkActive="router-link-active">Si aún no tiene cuenta aqui puede registrarse</a>
+    </div>
+  </div>
+</form>
+
+<app-footer></app-footer>

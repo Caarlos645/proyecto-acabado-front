@@ -1,0 +1,84 @@
+#primer-div {
+  height: auto;
+  width: 100%;
+  background-color: #0A1742;
+  color: white;
+  font-family: 'BMDupletDSP,HelveticaDSP', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.div-h1 {
+  padding-top: 6%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div-h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  padding-top: 3%;
+  text-align: center;
+}
+
+#h1-tech {
+  display: flex;
+  justify-content: center;
+}
+
+#segundo-div {
+  height: auto;
+  width: 100%;
+  background-color: #E9EDF0;
+  color: black;
+  font-family: 'BMDupletDSP,HelveticaDSP', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+#otro-div {
+  height: auto;
+  width: 100%;
+  background-color: #E9EDF0;
+  color: black;
+  font-family: 'BMDupletDSP,HelveticaDSP', sans-serif;
+}
+
+#div-hr {
+  margin-top: 30px;
+}
+
+#tech {
+  margin-top: -30px;
+}
+
+#tech-h5 {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .div-h1 {
+    font-size: 1.5rem;
+    padding-top: 10%;
+  }
+
+  .div-h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 5%;
+  }
+
+  #primer-div,
+  #segundo-div {
+    padding: 10px;
+  }
+
+  #tech-h5 {
+    margin-bottom: 50px;
+  }
+
+}

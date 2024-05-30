@@ -1,0 +1,103 @@
+<div class="flex flex-wrap justify-between items-center py-4 gap-4 lg:py-5 lg:px-7 lg:gap-8 bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+    <a class="navbar-brand" routerLink="/top/offers">
+      <img id="icono" src="/assets/images/logo.png" alt="" width="150px">
+    </a>
+
+    <div class="collapse navbar-collapse align-items-md-baseline justify-content-end" id="navbarSupportedContent">
+      <ul id="li-header" class="navbar-nav m-auto m-lg">
+        <li class="nav-item" id="li">
+          <a class="nav-link" routerLink="/">Quiénes somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/contact-us">Ayuda</a>
+        </li>
+
+      <li>
+        <a class="nav-link" [routerLink]="['/logout']" routerLinkActive="router-link-active">
+          <span class="material-symbols-outlined">
+            Salir
+          </span>
+        </a>
+      </li>
+    </ul>
+      <div class="search-container">
+        <input [(ngModel)]="searchQuery" (keyup)="buscar()" id="id-input" class="form-control mr-sm-2 m1-3" type="search" placeholder="¿Qué andas buscando?" aria-label="Search">
+        <div *ngIf="coincidencias.length > 0" class="search-results">
+          <ul class="ul-devuelve">
+            <li class="li-devuelve" *ngFor="let product of coincidencias">
+              <a [routerLink]="['/cart/detailproduct', product.id]">{{ product.name }} {{product.precio}} €</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscar()">Buscar</button>
+      </div>
+    </div>
+
+    <ul id="li-usuario-cesta">
+      <li *ngIf="username && username !== ''; else notLoggedIn">
+        <a>
+          <span class="material-symbols-outlined">
+            <div id="divUsuario">
+              <span>{{ email }}</span>
+              <span>{{ username }}</span>
+            </div>
+          </span>
+        </a>
+      </li>
+      <ng-template #notLoggedIn>
+        <li>
+          <a routerLink="/user/login">
+            <span class="material-symbols-outlined">
+              👤
+            </span>
+          </a>
+        </li>
+      </ng-template>
+      <li>
+        <a class="nav-link" [routerLink]="['/cart/sumary']" routerLinkActive="router-link-active">
+          <span class="material-symbols-outlined">
+            🛒
+          </span>
+        </a>
+      </li>
+
+    </ul>
+
+    <button class="navbar-toggler bg-white ms-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <br>
+    <br>
+  </nav>
+
+  <ul id="ul-productos">
+    <nav class="navbar navbar-light">
+      <div class="btn-menu">
+        <label for="btn-menu">iiii☰ Todos los productos</label>
+      </div>
+
+      <input type="checkbox" id="btn-menu">
+      <div class="container-menu">
+        <div class="cont-menu">
+          <a [routerLink]="['/top/offers']" routerLinkActive="router-link-active">Top Ofertas</a>
+          <ng-container *ngFor="let c of categories">
+            <nav>
+              <a [routerLink]="['/category/home', c.id]">{{ c.name }}</a>
+            </nav>
+          </ng-container>
+          <label for="btn-menu">&#88;</label>
+        </div>
+      </div>
+      <li>
+        <a class="navbar-brand d-xs-none" id="ocultar" [routerLink]="['/top/offers']" routerLinkActive="router-link-active">Top Ofertas</a>
+      </li>
+      <ng-container *ngFor="let c of categories">
+        <li>
+          <a class="navbar-brand" id="ocultar" [routerLink]="['/category/home', c.id]" routerLinkActive="router-link-active">{{ c.name }}</a>
+        </li>
+      </ng-container>
+    </nav>
+  </ul>
+</div>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+/* Eliminar márgenes predeterminados del body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustar estilos de la barra de navegación */
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+#icono {
+  max-height: 120px;
+}
+
+#li-usuario-cesta {
+  list-style: none;
+  display: flex;
+  color: black;
+  margin-top: 10px;
+}
+
+a {
+  color: black;
+}
+
+li:hover:not(:nth-child(5)) {
+  border-radius: 10px;
+  background-color: #ebf7f7;
+}
+
+#li-usuario-cesta span {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+input#id-input {
+  width: 50%;
+}
+
+@media (max-width: 426px) {
+  input#id-input {
+    width: 100% !important;
+  }
+}
+
+* {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#ul-productos {
+  list-style: none;
+  background-color: rgb(233, 237, 240);
+  margin-bottom: 0;
+  margin-left: -48px;
+}
+
+.icon-equis {
+  color: white;
+  background-color: white;
+}
+
+li:hover {
+  border-radius: 10px;
+  background-color: #ebf7f7;
+}
+
+li {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+a {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  #ocultar {
+    display: none;
+  }
+
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .container-menu {
+    background: rgba(0, 0, 0, 0.9); /* Más oscuro para pantallas pequeñas */
+  }
+
+  .cont-menu {
+    width: 100%;
+    max-width: none; /* Ocupa todo el ancho */
+    margin-left: 0; /* Sin margen */
+  }
+
+  .cont-menu nav {
+    transform: translateY(0); /* Ajuste de transformación */
+  }
+
+  .cont-menu nav a {
+    padding: 15px; /* Reducir padding */
+    font-size: 18px; /* Ajustar tamaño de fuente */
+  }
+
+  .cont-menu label {
+    font-size: 24px; /* Aumentar tamaño de fuente */
+  }
+}
+
+#btn-menu {
+  display: none;
+}
+
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  z-index: 2;
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 140vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#divUsuario {
+  display: flex;
+  flex-direction: column;
+}
+
+#divUsuario span {
+  font-size: small;
+}
+
+/* Estilos para el contenedor de búsqueda y resultados */
+.search-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.search-results ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 8px 16px;
+  cursor: pointer;
+
+}
+
+.search-results li:hover {
+  background-color: #f1f1f1;
+}
+
+.search-results p {
+  padding: 8px 16px;
+}
+
+.li-devuelve {
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+}

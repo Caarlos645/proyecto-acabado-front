@@ -1,0 +1,28 @@
+<app-header-user></app-header-user>
+
+
+<form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+  <div class="contact-box">
+    <div class="contact-header">
+      <header>Contáctanos</header>
+      <br>
+      <br>
+      <p>Si tienes alguna duda o necesitas contactar con el equipo de <b>KéMobile</b> no dudes en escribirnos. Te escribiremos lo antes posible.</p>
+    </div>
+    <div class="input-box">
+      <input formControlName="from_name"  type="text" class="input-field" id="name" name="name" placeholder="Ingrese su nombre" required>
+    </div>
+    <div class="input-box">
+      <input formControlName="from_email" type="email" class="input-field" id="email" name="email" placeholder="Ingrese su email" required>
+    </div>
+    <div class="input-box">
+      <textarea  formControlName="message" class="input-field" id="message" name="message" placeholder="Ingrese su mensaje" required></textarea>
+    </div>
+    <div class="input-submit">
+      <button class="submit-btn" id="submit"></button>
+      <label for="submit">Enviar</label>
+    </div>
+  </div>
+</form>
+
+<app-footer></app-footer>

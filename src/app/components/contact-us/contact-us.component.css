@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dfdfdf;
+}
+.contact-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 5%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+.contact-header {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.contact-header header {
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+.input-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+textarea.input-field {
+    height: 120px; /* Ajusta la altura del textarea */
+    resize: none; /* Desactiva el redimensionamiento del textarea */
+    padding-top: 15px; /* Asegura que el texto no toque los bordes */
+}
+::placeholder {
+    font-weight: 500;
+    color: #222;
+}
+.input-field:focus {
+    width: 105%;
+}
+.input-submit {
+    position: relative;
+}
+.submit-btn {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background: #000;
+    transform: scale(1.05, 1);
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
