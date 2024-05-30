@@ -9,7 +9,7 @@ import { HeaderService } from './header.service';
 })
 export class OrderService {
 
-  private apiUrl : string = "http://localhost:8080/api/v1/orders";
+  private apiUrl : string = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/orders";
   private update: string ='update/state/order';
 
   constructor(private httpClient:HttpClient, private headerService: HeaderService) { }

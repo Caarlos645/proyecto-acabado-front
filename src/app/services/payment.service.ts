@@ -9,7 +9,7 @@ import { HeaderService } from './header.service';
   providedIn: 'root'
 })
 export class PaymentService {
-  private apiUrl: string = 'http://localhost:8080/api/v1/payments';
+  private apiUrl: string = 'https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments';
   constructor(private http: HttpClient, private headerService: HeaderService) {}
 
   getUrlPaypalPayment(dataPayment: DataPayment): Observable<UrlPaypalResponse> {
