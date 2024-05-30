@@ -9,7 +9,7 @@ import { Userdto } from '../common/userdto';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private apiUrl: string = 'https://proyecto-final-ecommerce-production.up.railway.app/api/v1/security';
+  private apiUrl: string = 'http://localhost:8080/api/v1/security';
   constructor(private httpClient: HttpClient) { }
 
   register(user : User):Observable<User>{

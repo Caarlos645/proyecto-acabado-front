@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HomeService {
-  private apiUrl: string = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/home";
+  private apiUrl: string = "http://localhost:8080/api/v1/home";
 
   constructor(private httpClient: HttpClient) { }
 

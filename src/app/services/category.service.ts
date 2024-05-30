@@ -8,7 +8,7 @@ import { HeaderService } from './header.service';
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl: string = 'https://proyecto-final-ecommerce-production.up.railway.app/api/v1/admin/categories';
+  private apiUrl: string = 'http://localhost:8080/api/v1/admin/categories';
 
   constructor(private http: HttpClient, private headerService: HeaderService) { }
 
